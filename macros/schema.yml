@@ -1,0 +1,36 @@
+version: 2
+
+macros:
+  - name: create_source_table
+    description: |-
+      **Note, this macro is for operation usage only, do not use it except in
+      `run-operation`**
+
+      This macro generates schemas if needed, landing tables for Debezium CDC
+      kafka connector and grants required permitions to the role, if
+      specified. It also prints a yaml schema for the source table.
+
+    arguments:
+      - name: schema_name
+        type: string
+        description: |-
+          **Required.** A name of a schema to create the table in.
+      - name: table_name
+        type: string
+        description: |-
+          **Required.** A name of a table to create.
+      - name: role_name
+        type: string or none
+        description: |-
+          *Optional.* A name of a role to grant required permissions. If
+          `none` -- no permissions will be grant.
+
+          Default: `none`.
+      - name: db
+        type: string or none
+        description: |-
+          *Optional.* A name of a database to create the table and the schema.
+          If `none` -- the database from a profile is used. Taking effect only
+          for platforms, supporting multi-database connections.
+
+          Default: `none`.

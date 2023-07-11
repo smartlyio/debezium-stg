@@ -1,0 +1,119 @@
+version: 2
+
+macros:
+  - &private_macro
+    name: _snowflake__qualify_part
+    docs:
+      show: false
+  - <<: *private_macro
+    name: _snowflake__select_all_fields_except_valid_to
+  - <<: *private_macro
+    name: a_deletion_event
+  - <<: *private_macro
+    name: after_field
+  - <<: *private_macro
+    name: an_upsert_event
+  - <<: *private_macro
+    name: batch_ordering_comparison
+  - <<: *private_macro
+    name: before_field
+  - <<: *private_macro
+    name: before_or_after
+  - <<: *private_macro
+    name: build_field_path
+  - <<: *private_macro
+    name: coalesce_with_dst
+  - <<: *private_macro
+    name: create_source_table_aliases
+  - <<: *private_macro
+    name: date_extraction_format
+  - <<: *private_macro
+    name: default__before_or_after
+  - <<: *private_macro
+    name: default__build_field_path
+  - <<: *private_macro
+    name: default__create_source_table
+  - <<: *private_macro
+    name: default__create_source_table_aliases
+  - <<: *private_macro
+    name: default__date_extraction_format
+  - <<: *private_macro
+    name: default__extract_op
+  - <<: *private_macro
+    name: default__if_db
+  - <<: *private_macro
+    name: default__to_stg_layer_aliases
+  - <<: *private_macro
+    name: default__to_stg_layer_scd4
+  - <<: *private_macro
+    name: default__to_stg_layer_scd4_to_scd2
+  - <<: *private_macro
+    name: default__to_stg_layer_scd_aliases
+  - <<: *private_macro
+    name: default__to_stg_layer_with_prev_state
+  - <<: *private_macro
+    name: default__to_stg_layer_without_prev_state
+  - <<: *private_macro
+    name: deletion_op
+  - <<: *private_macro
+    name: ensure_source_engine_supported
+  - <<: *private_macro
+    name: extract_column_alias
+  - <<: *private_macro
+    name: extract_op
+  - <<: *private_macro
+    name: field
+  - <<: *private_macro
+    name: field_if_alias
+  - <<: *private_macro
+    name: field_if_format
+  - <<: *private_macro
+    name: if_db
+  - <<: *private_macro
+    name: if_table_alias
+  - <<: *private_macro
+    name: iterator_format_join
+  - <<: *private_macro
+    name: lower_bound_cte
+  - <<: *private_macro
+    name: snowflake__before_or_after
+  - <<: *private_macro
+    name: snowflake__build_field_path
+  - <<: *private_macro
+    name: snowflake__create_source_table
+  - <<: *private_macro
+    name: snowflake__create_source_table_aliases
+  - <<: *private_macro
+    name: snowflake__date_extraction_format
+  - <<: *private_macro
+    name: snowflake__extract_op
+  - <<: *private_macro
+    name: snowflake__if_db
+  - <<: *private_macro
+    name: snowflake__lower_bound_cte
+  - <<: *private_macro
+    name: snowflake__to_stg_layer_aliases
+  - <<: *private_macro
+    name: snowflake__to_stg_layer_scd4
+  - <<: *private_macro
+    name: snowflake__to_stg_layer_scd4_to_scd2
+  - <<: *private_macro
+    name: snowflake__to_stg_layer_scd_aliases
+  - <<: *private_macro
+    name: snowflake__to_stg_layer_with_prev_state
+  - <<: *private_macro
+    name: snowflake__to_stg_layer_without_prev_state
+  - <<: *private_macro
+    name: source_field
+  - <<: *private_macro
+    name: to_stg_layer_aliases
+  - <<: *private_macro
+    name: to_stg_layer_scd4
+  - <<: *private_macro
+    name: to_stg_layer_scd4_to_scd2
+  - <<: *private_macro
+    name: to_stg_layer_scd_aliases
+  - <<: *private_macro
+    name: to_stg_layer_with_prev_state
+  - <<: *private_macro
+    name: to_stg_layer_without_prev_state

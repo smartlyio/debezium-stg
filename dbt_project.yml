@@ -1,0 +1,24 @@
+name: debezium_stg
+version: '0.0.1'
+config-version: 2
+require-dbt-version: '>=1.4.0'
+
+model-paths: ['models']
+analysis-paths: ['analysis']
+target-path: 'target'
+clean-targets: ['target']
+test-paths: ['test']
+seed-paths: ['data']
+
+vars:
+  row_id__alias: rolling_row_id
+  loaded_at__alias: snowpipe_loaded_at
+  is_deleted__alias: is_deleted
+  deleted_at__alias: delete_at
+  ts__alias: ts_ms
+  valid_from__alias: snowflake_valid_from
+  valid_to__alias: snowflake_valid_to
+  op__alias: snowflake_op
+  surrogate_key__alias: snowflake_surrogate_key
+
+

@@ -1,0 +1,43 @@
+
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'integration_tests'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'integration_tests'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+vars:
+  debezium_stg:
+    row_id__alias: __rolling_row_id__
+    loaded_at__alias: __loaded_at__
+    is_deleted__alias: is_deleted
+    deleted_at__alias: deleted_at
+    ts__alias: __ts__
+    valid_from__alias: __valid_from__
+    valid_to__alias: __valid_to__
+    op__alias: __op__
+    surrogate_key__alias: __inner_key__
+
+  row_id__alias: __rolling_row_id__
+  loaded_at__alias: __loaded_at__
+  is_deleted__alias: is_deleted
+  deleted_at__alias: deleted_at
+  ts__alias: __ts__
+  valid_from__alias: __valid_from__
+  valid_to__alias: __valid_to__
+  op__alias: __op__
+  surrogate_key__alias: __inner_key__

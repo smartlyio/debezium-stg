@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: fake_source
+    schema: integration_tests
+    tables:
+      - name: landing_table

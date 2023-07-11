@@ -1,0 +1,22 @@
+[sqlfluff]
+dialect = snowflake
+templater = dbt
+encoding = utf-8
+sql_file_exts = .sql
+large_file_skip_byte_limit = 100000
+
+[sqlfluff:indentation]
+tab_space_size = 2
+indented_ctes = True
+
+
+[sqlfluff:templater:dbt]
+project_dir = ./
+profiles_dir = ~/.dbt/
+profile = debezium_ods
+target = dev
+
+[sqlfluff:templater:jinja]
+apply_dbt_builtins = True
+
+
